@@ -5,12 +5,13 @@ function Navbar() {
   return (
     <div className="flex flex-col md:flex-row justify-between items-center py-4 px-6 bg-slate-200 text-gray-100">
       <div className="flex items-center">
-        <img
+      <NavLink to="/">  <img
           style={{ width: "90px" }}
           className="pb-3"
           src="/images/logoimg.png"
           alt=""
-        />
+        /></NavLink>
+      
       </div>
       <div className="md:flex md:items-center text-black">
         <div className="flex flex-col md:flex-row md:items-center md:ml-4">
