@@ -1,25 +1,44 @@
-import React from 'react'
+import React from "react";
 import { NavLink } from "react-router-dom";
-
 
 function Navbar() {
   return (
-    <div className='flex '>
-        <div>
-            <img style={{width:"90px", marginLeft:"80px"}} className="mt-4 pb-3 "  src='/images/logoimg.png' alt=''/>
+    <div className="flex flex-col md:flex-row justify-between items-center py-4 px-6 bg-slate-200 text-gray-100">
+      <div className="flex items-center">
+        <img
+          style={{ width: "90px" }}
+          className="pb-3"
+          src="/images/logoimg.png"
+          alt=""
+        />
+      </div>
+      <div className="md:flex md:items-center text-black">
+        <div className="flex flex-col md:flex-row md:items-center md:ml-4">
+          <NavLink
+            to="/about"
+            activeClassName="text-gray-300"
+            className="block text-md px-2 py-1 md:mx-2 hover:text-gray-300"
+          >
+            About Us
+          </NavLink>
+          <NavLink
+            to="/faqs"
+            activeClassName="text-gray-300"
+            className="block text-md px-2 py-1 md:mx-2 hover:text-gray-300"
+          >
+            FAQs
+          </NavLink>
+          <NavLink
+            to="/contactus"
+            activeClassName="text-gray-300"
+            className="block text-md px-2 py-1 md:mx-2 hover:text-gray-300"
+          >
+            Contact Us
+          </NavLink>
         </div>
-        <div className='gap-8'>
-            <ul className='flex gap-11 mt-4 pt-3'style={{marginLeft:"900px"}}>
-                <li>
-                    Menu
-                </li>
-                <li> <NavLink to="/about">About us</NavLink></li>
-                <li><NavLink to="/faqs">FAQS</NavLink></li>
-                <li> <NavLink to="/contactus">Contact us</NavLink></li>
-            </ul>
-        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
